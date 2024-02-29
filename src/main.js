@@ -3,10 +3,10 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import {
   fetchImages
-} from './js/pixabay-api.js';
+} from './js/pixabay-api';
 import {
   renderImages
-} from './js/render-functions.js';
+} from './js/render-functions';
 
 export const galleryList = document.querySelector('ul.gallery');
 export let query = '';
