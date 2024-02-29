@@ -7,7 +7,6 @@ let query = '';
 const inputQuery = document.getElementById('search-input');
 inputQuery.addEventListener('input', e => {
   query = inputQuery.value;
-  console.log(query);
 });
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click', () => {
@@ -26,6 +25,7 @@ searchButton.addEventListener('click', () => {
 });
 
 function fetchImages() {
+  galleryList.innerHTML = `<p class="loading-msg">Loading images, please wait...</p>`;
   return fetch(
     `https://pixabay.com/api/?key=42609290-856768105ab9e79485c69bf61&q=${query}&image_type=photo&orientation=horizontal&safesearch=true`
   ).then(response => {
@@ -54,11 +54,21 @@ function renderImages(data) {
           <img
             class="gallery-image"
             width="1280"
-            height="100%"
+            height="152"
             src="${image.webformatURL}"
             data-source="${image.largeImageURL}"
             alt="${image.tags}"
           />
+          <ul class="gallery-description">
+          <li><h3>Likes</h3><p>${image.likes}</p>
+          </li>
+          <li><h3>Views</h3><p>${image.views}</p>
+            </li>
+            <li><h3>Comments</h3><p>${image.comments}</p>
+              </li>
+              <li><h3>Downloads</h3><p>${image.downloads}</p>
+                </li>
+          </ul>
         </a>
       </li>`;
     })

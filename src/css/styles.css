@@ -2,6 +2,7 @@
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -14,6 +15,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.loading-msg {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 .search-bar {
   margin: 0 auto;
@@ -72,4 +81,35 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+}
+.gallery-description {
+  display:flex;
+  padding: 4px;
+  justify-content: space-evenly;
+  
+}
+.gallery-description > li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 48px;
+  height: 40px;
+}
+.gallery-description h3 {
+font-weight: 600;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: 0.04em;
+color: #2e2f42;
+}
+.gallery-description p {
+text-align: center;
+font-weight: 400;
+font-size: 12px;
+line-height: 200%;
+letter-spacing: 0.04em;
+color: #2e2f42;
+}
+.gallery-image {
+  height: 152px;
 }
