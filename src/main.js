@@ -25,7 +25,8 @@ searchButton.addEventListener('click', () => {
 });
 
 function fetchImages() {
-  galleryList.innerHTML = `<p class="loading-msg">Loading images, please wait...</p>`;
+  // galleryList.innerHTML = `<p class="loading-msg">Loading images, please wait...</p>`;
+  galleryList.innerHTML = `<div class="loader"></div>`;
   return fetch(
     `https://pixabay.com/api/?key=42609290-856768105ab9e79485c69bf61&q=${query}&image_type=photo&orientation=horizontal&safesearch=true`
   ).then(response => {
@@ -80,4 +81,5 @@ function renderImages(data) {
   };
   let lightbox = new SimpleLightbox('.gallery a', galleryCfg);
   lightbox.on('show.simplelightbox', function () {});
+  lightbox.refresh();
 }
