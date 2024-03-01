@@ -19,5 +19,5 @@ import{i as u,S as d}from"./assets/vendor-5b791d57.js";(function(){const o=docum
                 </li>
           </ul>
         </a>
-      </li>`).join("");l.insertAdjacentHTML("beforeend",s);const i={captionsData:"alt"};let t=new d(".gallery a",i);t.on("show.simplelightbox",function(){}),t.refresh()}const l=document.querySelector("ul.gallery");let c="";const a=document.getElementById("search-input");a.addEventListener("input",r=>{c=a.value});const p=document.getElementById("search-button");p.addEventListener("click",()=>{c&&h().then(r=>f(r)).catch(r=>{console.log(r),u.error({title:"Error",message:`Error: ${r}`,position:"topRight"})})});
+      </li>`).join("");l.insertAdjacentHTML("beforeend",s);const i={captionsData:"alt"};let t=new d(".gallery a",i);t.on("show.simplelightbox",function(){}),t.refresh()}const l=document.querySelector("ul.gallery");let c="";const a=document.getElementById("search-input");a.addEventListener("input",r=>{c=a.value.trim()});const p=document.getElementById("search-button");p.addEventListener("click",()=>{c&&h().then(r=>f(r)).catch(r=>{console.log(r),u.error({title:"Error",message:"Виникла помилка під час завантаження зображень. Будь ласка, спробуйте пізніше",position:"topRight"})})});
 //# sourceMappingURL=commonHelpers.js.map
