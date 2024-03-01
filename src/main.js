@@ -12,7 +12,7 @@ export const galleryList = document.querySelector('ul.gallery');
 export let query = '';
 const inputQuery = document.getElementById('search-input');
 inputQuery.addEventListener('input', e => {
-  query = inputQuery.value;
+  query = inputQuery.value.trim();
 });
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click', () => {
@@ -23,7 +23,7 @@ searchButton.addEventListener('click', () => {
         console.log(error);
         iziToast.error({
           title: 'Error',
-          message: `Error: ${error}`,
+          message: `Виникла помилка під час завантаження зображень. Будь ласка, спробуйте пізніше`,
           position: 'topRight',
         });
       });
