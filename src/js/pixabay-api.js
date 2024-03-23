@@ -2,7 +2,6 @@ import { galleryList } from '../main';
 import { query } from '../main';
 
 export function fetchImages(query) {
-  // Додано логіку для обробки пробілів у пошуковому запиті
   query = encodeURIComponent(query);
   galleryList.innerHTML = `<div class="loader"></div>`;
   return fetch(
