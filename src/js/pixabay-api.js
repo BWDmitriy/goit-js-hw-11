@@ -1,6 +1,6 @@
 import { galleryList } from '../main';
 import { query } from '../main';
-// Покращення №4: Додано параметр query до функції fetchImages
+
 export function fetchImages(query) {
   // Додано логіку для обробки пробілів у пошуковому запиті
   query = encodeURIComponent(query);
